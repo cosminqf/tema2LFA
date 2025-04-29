@@ -18,7 +18,7 @@ Acest proiect implementează un lanț complet de procesare a unei expresii regul
   - `acceptare_dfa(dfa, line)` – verifică dacă un șir este acceptat de DFA.
   - `verify()` – încarcă fișierul `tests.json` și rulează toate testele.
 
-- `tests.json` – fișier JSON care conține o listă de teste cu următoarea structură:
+- `tests.json` – fișier JSON care conține o listă de 20 de teste cu următoarea structură:
   ```json
   [
     {
@@ -44,13 +44,13 @@ Asigură-te că ai Python instalat (versiunea 3.6+ recomandată).
    ```bash
    python tema2.py
    ```
-4. Vei vedea rezultatele testelor în consolă, împreună cu mesajele "PASS" sau "FAIL".
+4. Vei vedea rezultatele testelor în consolă, împreună cu mesajele "PASS" sau "FAIL" si culorile adecvate.
 
 ## Decizii de implementare
 
 - **Expresia postfixată** este generată pentru a simplifica implementarea algoritmului Thompson.
 - **Algoritmul Thompson** este utilizat pentru construirea pas cu pas a unui NFA pentru fiecare simbol și operator.
-- **În NFA**, tranzițiile lambda sunt păstrate în câmpul `eps`, separat de tranzițiile normale.
+- **În NFA**, tranzițiile lambda sunt păstrate în câmpul `eps` (prescurtare de la epsilon), separat de tranzițiile normale.
 - **În conversia către DFA**, se folosește închideri epsilon și gruparea stărilor NFA într-o singură stare DFA (subset construction).
 - **DFA-ul rezultat** este folosit pentru testarea fiecărui șir de intrare dat în `tests.json`.
 
@@ -63,9 +63,9 @@ Asigură-te că ai Python instalat (versiunea 3.6+ recomandată).
 ## Exemple de rulare
 
 ```bash
-Rezultate test R1 cu regex a|b :
-Pentru string-ul a trebuia sa obtinem True si am obtinut True -> ✅ PASS
-Pentru string-ul ab trebuia sa obtinem False si am obtinut False -> ✅ PASS
+Rezultate test R1 cu regex a*b :
+Pentru string-ul b trebuia sa obtinem True si am obtinut True -> ✅ PASS (cu verde)
+Pentru string-ul aaab trebuia sa obtinem True si am obtinut True -> ✅ PASS (cu rosu)
 ```
 
 ---
