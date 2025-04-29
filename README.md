@@ -65,7 +65,7 @@ Asigură-te că ai Python instalat (versiunea 3.6+ recomandată).
 ```bash
 Rezultate test R1 cu regex a*b :
 Pentru string-ul b trebuia sa obtinem True si am obtinut True -> ✅ PASS (cu verde)
-Pentru string-ul aaab trebuia sa obtinem True si am obtinut True -> ✅ PASS (cu rosu)
+Pentru string-ul aaab trebuia sa obtinem True si am obtinut True -> ✅ PASS 
 ```
 
 ---
