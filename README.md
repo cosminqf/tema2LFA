@@ -23,11 +23,12 @@ Acest proiect implementează un lanț complet de procesare a unei expresii regul
   [
     {
       "name": "R1",
-      "regex": "a|b",
+      "regex": "a*b",
       "test_strings": [
-        {"input": "a", "expected": true},
         {"input": "b", "expected": true},
-        {"input": "ab", "expected": false}
+        {"input": "aaab", "expected": true},
+        {"input": "ab", "expected": true},
+        {"input": "a", "expected": false}
       ]
     }
   ]
